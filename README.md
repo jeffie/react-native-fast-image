@@ -125,7 +125,12 @@ Headers to load the image with. e.g. `{ Authorization: 'someAuthToken' }`.
 -   `FastImage.priority.high` - High Priority.
 
 ---
+### `defaultSource?: number`
 
+-   An asset loaded with `require(...)`.
+-   Note that like the built-in `Image` implementation, on Android `defaultSource` does not work in debug mode. This is due to the fact that assets are sent from the dev server, but RN's functions only know how to load it from `res`.
+
+---
 ### `source.cache?: enum`
 
 -   `FastImage.cacheControl.immutable` - **(Default)** - Only updates if url changes.
